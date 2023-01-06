@@ -1,0 +1,24 @@
+{
+  "Type" : "AWS::Table",
+  "Properties" : {
+    "AttributeDefinitions" : [
+      
+        {
+          "AttributeName": "LenId",
+          "AttributeType": "BigInt"
+        }
+      
+        {
+          "AttributeName": "Shores",
+          "AttributeType": "String"
+        }
+      
+        {
+          "AttributeName": "Tests",
+          "AttributeType": "String"
+        }
+      
+    ],
+    "TableName" : "Lents"
+  }
+}

@@ -1,5 +1,6 @@
 https://code.tutsplus.com/tutorials/build-your-own-yeoman-generator--cms-20040
 npm link
+https://zellwk.com/blog/publish-to-npm/
 # generator-kikov-2 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > 
 
