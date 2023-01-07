@@ -1,3 +1,4 @@
+<% for (let i=0; i<columns.length; i++) { %>
 package com.bme.clp.bck.q.domain.model.mongo;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -13,12 +14,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "TEST")
-public class ModelDAO {
+@Document(collection ="<%=columns[i].mongoCollection%>")
+public class <%= columns[i].modelName %>DAO {
 
   @MongoId
-  private ModelPKDAO id;
-  <% for (let i=0; i<columns.length; i++) { %>
+  private <%= columns[i].modelName %>PKDAO id;
 	@Field(name = "<%= columns[i].attributeName %>")
 	private <%= columns[i].attributeType %> <%= columns[i].attributeName %>;
   <% } %>

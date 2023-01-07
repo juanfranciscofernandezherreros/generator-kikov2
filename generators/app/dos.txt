@@ -1,0 +1,30 @@
+const columnPrompts = [{
+    type: 'input',
+    name: 'attributeName',
+    message: 'Define your Schema - ColumnName?',
+    default: 'ID'
+  }, {
+    type: 'input',
+    name: 'attributeType',
+    message: 'Define your Schema - DataType?',
+    default: 'S'
+  }, {
+    type: 'confirm',
+    name: 'repeat',
+    message: 'Do you want to add more columns?',
+    default: 'Y'
+  }]
+  
+
+  this.columns = [];
+  
+  
+
+  const loop = (relevantPrompts) => {
+    return this.prompt(relevantPrompts).then(props => {
+      this.columns.push(props);
+
+      return props.repeat ? loop(columnPrompts) : this.prompt([]);
+
+    })
+  }
