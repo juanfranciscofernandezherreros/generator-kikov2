@@ -1,0 +1,894 @@
+{
+	"info": {
+		"_postman_id": "1999b7a4-84a2-4e36-bd10-cb7fee5a0a23",
+		"name": "VolatilityTenor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get volatility tenor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/sessions/20200130/risk-groups/C2/risk-underlyings/021/volatility/Spot",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sessions",
+						"20200130",
+						"risk-groups",
+						"C2",
+						"risk-underlyings",
+						"021",
+						"volatility",
+						"Spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "volatility tenor not exist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/sessions/20200101/risk-groups/C1/risk-underlyings/C2/volatility/Spot",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"sessions",
+						"20200101",
+						"risk-groups",
+						"C1",
+						"risk-underlyings",
+						"C2",
+						"volatility",
+						"Spot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "volatility tenor not exist Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [],\r\n    \"restrictions\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only filters of tenor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"tenor\",\r\n            \"values\": [\r\n                \"Spot\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only filter sessionDate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"sessionDate\",\r\n            \"values\": [\r\n                \"20200130\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only filter sessionDate Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"sessionDate\",\r\n            \"values\": [\r\n                \"20210505\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only filter sessionDate not valid",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"sessionDate\",\r\n            \"values\": [\r\n                \"20210505\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only filter riskGroup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"riskGroup\",\r\n            \"values\": [\r\n                \"C2\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Only filter riskUnderlying",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"riskUnderlyingCode\",\r\n            \"values\": [\r\n                \"021\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter tenor and sessionDate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\": [\r\n        {\r\n            \"attribute\": \"tenor\",\r\n            \"values\": [\r\n                \"Spot\"\r\n            ]\r\n        },\r\n        {\r\n            \"attribute\": \"sessionDate\",\r\n            \"values\": [\r\n                \"20200130\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restrictions sessionDate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"sessionDate\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": \"20200130\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restrictions riskgroup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"riskGroup\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": \"C2\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restrictions riskSubgroup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"riskSubgroupId\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": \"C201\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restrictions riskSubgroup like",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"riskSubgroupId\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"like\",\r\n          \"value\": \"C\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "riskUnderlyingCode",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"riskUnderlyingCode\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": \"021\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "riskUnderlyingCode like",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"riskGroup\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"like\",\r\n          \"value\": \"x\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "riskUnderlying - Revisar mapper",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"riskUnderlying\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"like\",\r\n          \"value\": \"FIE\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tenor - eqt",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"tenor\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": \"Spot\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "maturityDays - eqt",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"maturityDays\",\r\n      \"type\": \"integer\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": 1\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "instrumentType",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"instrumentType\",\r\n      \"type\": \"string\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": \"C\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "underlyingPrice",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"underlyingPrice\",\r\n      \"type\": \"decimal\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"gt\",\r\n          \"value\": 1.0\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "divisor - lt",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"divisor\",\r\n      \"type\": \"integer\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"lt\",\r\n          \"value\": 4\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ivatm",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"volatilityAtm\",\r\n      \"type\": \"decimal\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"gt\",\r\n          \"value\": 13\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "varSkewUp - Integer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"varSkewUp\",\r\n      \"type\": \"integer\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"gt\",\r\n          \"value\": 98\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skewUp - Double",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"skewUp\",\r\n      \"type\": \"decimal\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"lt\",\r\n          \"value\": 0.02\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "varSkewDown",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"varSkewDown\",\r\n      \"type\": \"integer\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": 99\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "skewDown- Double Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"skewDown\",\r\n      \"type\": \"decimal\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"eqt\",\r\n          \"value\": 0.673\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SKEWUPNORM - Double Copy 2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"skewUpNorm\",\r\n      \"type\": \"decimal\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"lt\",\r\n          \"value\": 5.4\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SKEWDOWNNORM- Double Copy 3",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filters\":[\r\n\r\n    ],\r\n \"restrictions\": [\r\n    {\r\n      \"attribute\": \"skewDownNorm\",\r\n      \"type\": \"decimal\",\r\n      \"operator\": \"and\",\r\n      \"values\": [\r\n        {\r\n          \"restriction\": \"gt\",\r\n          \"value\": 2\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/volatilities/tenors/search",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"volatilities",
+						"tenors",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
