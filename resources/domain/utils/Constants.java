@@ -30,14 +30,12 @@ public class Constants {
   public static final String SUFIX_DATE_ISO_INSTANT = "T00:00:00.000Z";
   public static final String RESOURCE_NOT_FOUND = "Resource not found";
   
-  
-  public static final String[] EQUIVALENCE_RISKGROUP = new String[] {
+  public static final String[] EQUIVALENCE_RISKGROUPID = new String[] {
     "riskGroupId",
 	"riskGroup"
   };
   
-  
-  public static final String[] EQUIVALENCE_TEST = new String[] {
+  public static final String[] EQUIVALENCE_TESTID = new String[] {
     "testId",
 	"test"
   };
