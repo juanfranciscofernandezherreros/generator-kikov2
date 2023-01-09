@@ -13,9 +13,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = DCLEAR.MUR.KS.SOMETHING)
+@Document(collection = "DCLEAR.MUR.KS.SOMETHING")
 public class ModelDAO {
 
 	
-
+		@Field(name = "riskGroup")
+		private riskGroup riskGroup;
+	
 }

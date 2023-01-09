@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.bme.clp.bck.resources.q.web.api.model.FilterType;
 import com.bme.clp.bck.resources.q.web.api.model.RestrictionRootType;
+import com.bme.clp.bck.resources.q.domain.model.mongo.ModelDAO;
 
 public class UtilsMappings {
 	

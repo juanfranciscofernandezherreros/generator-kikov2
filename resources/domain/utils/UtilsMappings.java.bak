@@ -67,7 +67,7 @@ public class UtilsMappings {
         if (sort.contains(Constants.EQUIVALENCE_RISKGROUPID[0])) {
           result.add(order.concat(Constants.EQUIVALENCE_RISKGROUPID[1]));
 		
-        } else if (sort.contains(Constants.EQUIVALENCE_TESTID[1])) {
+        } else if (sort.contains(Constants.EQUIVALENCE_TESTID[0])) {
           result.add(order.concat(Constants.EQUIVALENCE_TESTID[1]));
         
 		} else {
