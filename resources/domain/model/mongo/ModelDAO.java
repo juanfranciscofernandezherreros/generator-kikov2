@@ -17,15 +17,5 @@ import lombok.Setter;
 public class ModelDAO {
 
 	
-        {
-          "AttributeName": "+riskGroupId",
-		  "AttributeName": "String"
-        }
-      
-        {
-          "AttributeName": "+riskSubgroup",
-		  "AttributeName": "String"
-        }
-      
 
 }

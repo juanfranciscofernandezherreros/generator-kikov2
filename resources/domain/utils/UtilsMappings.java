@@ -11,83 +11,17 @@ public class UtilsMappings {
 
   public static List<FilterType> mappingFilter(final List<FilterType> listFilters) {
     List<FilterType> result = new ArrayList<FilterType>();
-    listFilters.forEach(filter -> {
-      
-        {
-		result.add(filter);
-        }
-	
-        {
-		result.add(filter);
-        }
-	
-    });
     return result;
   }
 
   public static List<RestrictionRootType> mappingRestrictions(
     final List<RestrictionRootType> listRestrictionsRootTypes) {
     List<RestrictionRootType> result = new ArrayList<RestrictionRootType>();
-    listRestrictionsRootTypes.forEach(restrictionRootType -> {
-      
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-        {
-      result.add(restrictionRootType);
-        }
-	 
-	}
-    });
     return result;
   }
 
   public static String mappingSorting(final String sorting) {
-    if (sorting != null) {
-      String[] sortingSplit = sorting.split(",");
-      List<String> result = new ArrayList<String>();
-      Arrays.asList(sortingSplit).forEach(sort -> {
-        //String order = sort.startsWith("-") ? "-" : "+";
-        //Add specific equivalence in case of field change.
-		
-        {
-        result.add(sort);
-        }
-	
-        {
-        result.add(sort);
-        }
-	
-      });
-      return String.join(",", result);
-    } else {
-      return "";
-    }
+    return sorting;
   }
 
 }

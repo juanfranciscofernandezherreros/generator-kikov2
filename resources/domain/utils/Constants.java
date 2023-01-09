@@ -31,11 +31,19 @@ public class Constants {
   public static final String RESOURCE_NOT_FOUND = "Resource not found";
   
         {
-          "AttributeName": "+riskGroupId",
+          "AttributeName": "riskGroupId",
         }
   
         {
-          "AttributeName": "+riskSubgroup",
+          "AttributeName": "testId",
+        }
+  
+        {
+          "AttributeName": "riskGroup",
+        }
+  
+        {
+          "AttributeName": "test",
         }
   
 }
