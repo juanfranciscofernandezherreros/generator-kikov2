@@ -16,4 +16,6 @@ import lombok.Setter;
 @Document(collection = DCLEAR.MUR.KS.SOMETHING)
 public class ModelDAO {
 
+	
+
 }

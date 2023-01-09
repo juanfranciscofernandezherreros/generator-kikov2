@@ -31,13 +31,13 @@ public class Constants {
   public static final String RESOURCE_NOT_FOUND = "Resource not found";
   
   
-  public static final String[] EQUIVALENCE_RISKGROUP = new String[] {
+  public static final String[] EQUIVALENCE_riskGroup = new String[] {
     "riskGroupId",
 	"riskGroup"
   };
   
   
-  public static final String[] EQUIVALENCE_TEST = new String[] {
+  public static final String[] EQUIVALENCE_test = new String[] {
     "testId",
 	"test"
   };
